@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Paint 🎨</title>
+    <!--<link rel="stylesheet" href="./styles/styles.css" />-->
+</head>
+
+<body>
+    <h1>Mini Paint 🎨</h1>
+    <div class="toolbar">
+        <p><b>Starting point</b></p>
+        <p>Introduce X axis start point:</p>
+        <input type="number" id="xs">
+        <p>Introduce Y axis start point:</p>
+        <input type="number" id="ys">
+        <br>
+        <p><b>Ending point</b></p>
+        <p>Introduce X axis start point:</p>
+        <input type="number" id="xe">
+        <p>Introduce Y axis start point:</p>
+        <input type="number" id="ye">
+        <br><br>
+        <button id="drawBtn">Draw line</button>
+        <button id="cleanBtn">Clean canvas</button>
+    </div>
+    <br>
+    <canvas id="mainCanvas" style="border:1px solid #000000;"></canvas>
+    <script type="module" src="./dist/main.js"></script>
+</body>

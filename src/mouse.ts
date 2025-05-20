@@ -1,10 +1,10 @@
 let isDrawing = false;
 
-export const mouseDrawing = (canvas: HTMLCanvasElement) => {    
+export const enableMouseDrawing = (canvas: HTMLCanvasElement) => {
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    
+
     canvas.addEventListener("mousedown", (e) => {
         isDrawing = true;
         ctx.beginPath();
@@ -12,16 +12,16 @@ export const mouseDrawing = (canvas: HTMLCanvasElement) => {
     });
 
     canvas.addEventListener("mousemove", (e) => {
-        isDrawing = true;        
+        if (!isDrawing) return;
         ctx.lineTo(e.offsetX, e.offsetY);
         ctx.stroke();
     });
 
     canvas.addEventListener("mouseup", (e) => {
-        isDrawing = false;        
+        isDrawing = false;
     });
 
     canvas.addEventListener("mouseleave", (e) => {
-        isDrawing = false;        
-    });  
+        isDrawing = false;
+    });
 };

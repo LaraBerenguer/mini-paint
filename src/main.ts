@@ -1,19 +1,39 @@
 import { drawLine, clearCanvas } from "./canvas.js";
+import { enableMouseDrawing } from "./mouse.js";
 
-document.getElementById("drawBtn")?.addEventListener("click", () => {
-    const xStart = document.getElementById("xs") as HTMLInputElement;
-    const yStart = document.getElementById("ys") as HTMLInputElement;
-    const xEnd = document.getElementById("xe") as HTMLInputElement;
-    const yEnd = document.getElementById("ye") as HTMLInputElement;
+const initApp = () => {
+    const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
+    if (!canvas) { console.log("Canvas not found"); return; };
 
-    drawLine({
-        xStart: Number(xStart.value),
-        yStart: Number(yStart.value),
-        xEnd: Number(xEnd.value),
-        yEnd: Number(yEnd.value),
-    });
-});
+    setClearButton();
+    setDrawButton();
+    enableMouseDrawing(canvas);
+};
 
-document.getElementById("cleanBtn")?.addEventListener("click", () => {
-    clearCanvas();
-});
+const setDrawButton = () => {
+    const drawBtn = document.getElementById("drawBtn");
+    if (!drawBtn) { return };
+
+    drawBtn.addEventListener("click", () => {
+        const xStart = document.getElementById("xs") as HTMLInputElement;
+        const yStart = document.getElementById("ys") as HTMLInputElement;
+        const xEnd = document.getElementById("xe") as HTMLInputElement;
+        const yEnd = document.getElementById("ye") as HTMLInputElement;
+
+        drawLine({
+            xStart: Number(xStart.value),
+            yStart: Number(yStart.value),
+            xEnd: Number(xEnd.value),
+            yEnd: Number(yEnd.value),
+        });
+    })
+};
+
+const setClearButton = () => {
+    const clearBtn = document.getElementById("cleanBtn");
+    if (!clearBtn) { return };
+
+    clearBtn.addEventListener("click", clearCanvas);
+};
+
+initApp();

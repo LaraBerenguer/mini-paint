@@ -1,11 +1,9 @@
 import DrawLine from "./types";
+const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
+const ctx = canvas.getContext("2d");
 
 export const drawLine = ({ xStart, yStart, xEnd, yEnd }: DrawLine) => {
-
-    const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
     if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     ctx.beginPath();
@@ -15,13 +13,8 @@ export const drawLine = ({ xStart, yStart, xEnd, yEnd }: DrawLine) => {
 };
 
 export const clearCanvas = () => {
-    const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
     if (!canvas) return;
+    if (!ctx) return;
 
-    const ctx = canvas.getContext("2d");
-    if (ctx) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
-    } else {
-        return;
-    };
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
 };

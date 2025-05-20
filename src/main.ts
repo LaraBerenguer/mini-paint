@@ -1,6 +1,19 @@
 import { drawLine, clearCanvas } from "./canvas.js";
+import { mouseDrawing } from "./mouse.js";
 
-document.getElementById("drawBtn")?.addEventListener("click", () => {
+const initApp = () => {
+    const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
+    if (!canvas) { console.log("Canvas not found"); return; };
+
+    setClearButton();
+    setDrawButton();
+    setClearButton();
+};
+
+const setDrawButton = () => {
+    const drawBtn = document.getElementById("drawBtn");
+    if (!drawBtn) { return };
+
     const xStart = document.getElementById("xs") as HTMLInputElement;
     const yStart = document.getElementById("ys") as HTMLInputElement;
     const xEnd = document.getElementById("xe") as HTMLInputElement;
@@ -12,8 +25,13 @@ document.getElementById("drawBtn")?.addEventListener("click", () => {
         xEnd: Number(xEnd.value),
         yEnd: Number(yEnd.value),
     });
-});
+};
 
-document.getElementById("cleanBtn")?.addEventListener("click", () => {
-    clearCanvas();
-});
+const setClearButton = () => {
+    const clearBtn = document.getElementById("cleanBtn");
+    if (!clearBtn) { return };
+
+    clearBtn.addEventListener("click", clearCanvas);
+};
+
+initApp();

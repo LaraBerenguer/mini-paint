@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "dev": "npx tsc --watch",
+    "serve": "npx http-server ."
   }
 }

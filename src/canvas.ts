@@ -9,7 +9,6 @@ export const drawLine = ({ xStart, yStart, xEnd, yEnd }: DrawLine) => {
     if (!ctx) return;
 
     ctx.beginPath();
-
     ctx.moveTo(xStart, yStart);
     ctx.lineTo(xEnd, yEnd);
     ctx.stroke();

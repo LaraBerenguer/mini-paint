@@ -5,28 +5,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Paint 🎨</title>
-    <!--<link rel="stylesheet" href="./styles/styles.css" />-->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='1em' font-size='80'>🎨</text></svg>" />
+    <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 
 <body>
     <h1>Mini Paint 🎨</h1>
-    <div class="toolbar">
-        <p><b>Starting point</b></p>
-        <p>Introduce X axis start point:</p>
-        <input type="number" id="xs">
-        <p>Introduce Y axis start point:</p>
-        <input type="number" id="ys">
+    <main class="container">
+        <section class="toolbar">
+            <fieldset>
+                <legend>Starting point</legend>
+                <label for="xs">X axis start point:</label>
+                <input type="number" id="xs" />
+                <label for="ys">Y axis start point:</label>
+                <input type="number" id="ys" />
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Ending point</legend>
+                <label for="xe">X axis end point:</label>
+                <input type="number" id="xe" />
+                <label for="ye">Y axis end point:</label>
+                <input type="number" id="ye" />
+            </fieldset>
+            <br><br>
+            <div class="buttons">
+                <button id="drawBtn">Draw line</button>
+                <button id="cleanBtn">Clean canvas</button>
+            </div>
+        </section>
+
         <br>
-        <p><b>Ending point</b></p>
-        <p>Introduce X axis start point:</p>
-        <input type="number" id="xe">
-        <p>Introduce Y axis start point:</p>
-        <input type="number" id="ye">
-        <br><br>
-        <button id="drawBtn">Draw line</button>
-        <button id="cleanBtn">Clean canvas</button>
-    </div>
-    <br>
-    <canvas id="mainCanvas" style="border:1px solid #000000;"></canvas>
+        <canvas id="mainCanvas"></canvas>
+    </main>
+
     <script type="module" src="./dist/main.js"></script>
 </body>

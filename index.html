@@ -14,7 +14,7 @@
     <h1>Mini Paint 🎨</h1>
     <main class="container">
         <section class="toolbar">
-            <fieldset>
+            <!--<fieldset>
                 <legend>Starting point</legend>
                 <label for="xs">X axis start point:</label>
                 <input type="number" id="xs" />
@@ -30,14 +30,20 @@
                 <input type="number" id="ye" />
             </fieldset>
             <br><br>
-            <div class="buttons">
-                <button id="drawBtn">Draw line</button>
-                <button id="cleanBtn">Clean canvas</button>
+            <button id="drawBtn">draw line</button>-->
+            <button id="cleanBtn">clean canvas</button>
+        </section>
+        <br>
+        <section class="main">
+            <div class="canvas-wrapper">
+                <img class="cute-frog" src="./public/cute frog svg.svg">
+                <canvas id="mainCanvas" width="500" height="250"></canvas>
             </div>
         </section>
 
-        <br>
-        <canvas id="mainCanvas"></canvas>
+
+
+
     </main>
 
     <script type="module" src="./dist/main.js"></script>

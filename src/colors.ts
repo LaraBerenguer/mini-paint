@@ -8,17 +8,17 @@ export const changeColors = (colorValue: string) => {
     switch (colorValue) {
         case "red":
             if (colorValue === "red") {
-                ctx.strokeStyle = "red";
+                ctx.strokeStyle = "rgb(242, 132, 130)";
             };
             break;
         case "green":
             if (colorValue === "green") {
-                ctx.strokeStyle = "green";
+                ctx.strokeStyle = "rgb(132, 165, 157)";
             };
             break;
         case "yellow":
             if (colorValue === "yellow") {
-                ctx.strokeStyle = "yellow";
+                ctx.strokeStyle = "rgb(246, 189, 96)";
             };
             break;
         case "black":

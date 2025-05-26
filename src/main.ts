@@ -1,6 +1,6 @@
 import { drawLine, clearCanvas } from "./canvas.js";
 import { enableMouseDrawing } from "./mouse.js";
-import { changeColors } from "./colors.js";
+import { showColorButtons } from "./ui.js";
 
 const initApp = () => {
     const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
@@ -39,10 +39,7 @@ const setClearButton = () => {
 };
 
 const setChangeColor = () => {
-    const selectedColor = document.getElementById("colors") as HTMLSelectElement;
-    if (!selectedColor) { return };
-
-    selectedColor.addEventListener("click", () => {changeColors(selectedColor.value)});
+    showColorButtons();
 };
 
 initApp();

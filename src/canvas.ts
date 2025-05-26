@@ -1,4 +1,5 @@
-import { DrawLine } from "./types";
+import { DrawLine } from "./types.js";
+
 const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d");
 

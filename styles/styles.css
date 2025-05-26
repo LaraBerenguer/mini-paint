@@ -45,12 +45,25 @@ button {
     cursor: pointer;
 }
 
+.color-options {
+    display: flex;
+    flex-flow: row;
+    gap: 5px;
+}
+
 #colors {
     padding: 10px 10px;
     background-color: #F28482;
     color: white;
     border-radius: 6px;
     cursor: pointer;
+    border: 2px solid black;
+}
+.color-swatch {
+    border: none;    
+}
+
+.color-swatch.active {
     border: 2px solid black;
 }
 

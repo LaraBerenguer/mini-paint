@@ -8,7 +8,7 @@ const initApp = () => {
 
     setClearButton();
     setDrawButton();
-    setChangeColor();
+    setColorButtons();
     enableMouseDrawing(canvas);
 };
 
@@ -38,7 +38,7 @@ const setClearButton = () => {
     clearBtn.addEventListener("click", clearCanvas);
 };
 
-const setChangeColor = () => {
+const setColorButtons = () => {
     showColorButtons();
 };
 

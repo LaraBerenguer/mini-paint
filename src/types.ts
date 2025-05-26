@@ -4,3 +4,5 @@ export interface DrawLine {
     xEnd: number;
     yEnd: number;
 };
+
+export type PaintColor = "red" | "green" | "yellow" | "black"; 

@@ -1,5 +1,6 @@
 import { allColors, changeColors } from "./colors.js";
-import { PaintColor } from "./types.js";
+import { allBrushes, changeBrushSize } from "./brushes.js";
+import { PaintColor, BrushSize } from "./types.js";
 
 export const showColorButtons = () => {
     const container = document.querySelector(".colorsSelector");
@@ -28,3 +29,32 @@ export const showColorButtons = () => {
 
     container.appendChild(colorOptions);
 };
+
+export const showBrushSizes = () => {
+    const container = document.querySelector(".brushSelector");
+    if (!container) return;
+    container.innerHTML = "";
+
+    const brushOptions = document.createElement("div");
+    brushOptions.className = "brush-options";
+
+    for (const brushName in allBrushes) {
+        const name = brushName as BrushSize;
+        const value = allBrushes[name];
+
+        const btn = document.createElement("button");
+        btn.className = `brush-size size-${name}`;
+        btn.title = name;        
+        btn.addEventListener("click", () => {            
+            document.querySelectorAll(".brush-size").forEach(btn => btn.classList.remove("active"));
+            btn.classList.add("active");
+            changeBrushSize(name);
+        });
+
+        brushOptions.appendChild(btn);
+    };
+
+    container.appendChild(brushOptions);
+};
+
+

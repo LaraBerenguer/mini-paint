@@ -1,4 +1,4 @@
-import { drawLine, clearCanvas } from "./canvas.js";
+import { drawLine, clearCanvas, ereaseStroke } from "./canvas.js";
 import { enableMouseDrawing } from "./mouse.js";
 import { showColorButtons, showBrushSizes } from "./ui.js";
 
@@ -8,6 +8,7 @@ const initApp = () => {
 
     setClearButton();
     setBrushSizes();
+    setEreaseStroke();
     setDrawButton();
     setColorButtons();
     enableMouseDrawing(canvas);
@@ -37,6 +38,13 @@ const setClearButton = () => {
     if (!clearBtn) { return };
 
     clearBtn.addEventListener("click", clearCanvas);
+};
+
+const setEreaseStroke = () => {
+    const ereaseBtn = document.getElementById("ereaseBtn");
+    if (!ereaseBtn) { return };
+
+    ereaseBtn.addEventListener("click", ereaseStroke);
 };
 
 const setColorButtons = () => {

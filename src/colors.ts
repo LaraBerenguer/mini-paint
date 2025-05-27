@@ -15,6 +15,7 @@ export const changeColors = (colorValue: PaintColor) => {
 
     const color = allColors[colorValue];
     if (color) {
+        ctx.globalCompositeOperation = "source-over";
         ctx.strokeStyle = color;
     };
 };

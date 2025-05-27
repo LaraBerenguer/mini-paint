@@ -5,6 +5,6 @@
   "scripts": {
     "dev": "npx tsc --watch",
     "serve": "npx http-server .",
-    "build": "npx tsc"
+    "build": "tsc"
   }
 }

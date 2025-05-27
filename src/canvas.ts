@@ -19,3 +19,12 @@ export const clearCanvas = () => {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 };
+
+export const ereaseStroke = () => {
+    if (!canvas) return;
+    if (!ctx) return;
+
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.strokeStyle = "rgba(0,0,0,1)";
+    ctx.lineWidth = 10;
+};

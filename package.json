@@ -4,6 +4,7 @@
   },
   "scripts": {
     "dev": "npx tsc --watch",
-    "serve": "npx http-server ."
+    "serve": "npx http-server .",
+    "build": "npx tsc"
   }
 }

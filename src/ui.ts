@@ -40,11 +40,12 @@ export const showBrushSizes = () => {
 
     for (const brushName in allBrushes) {
         const name = brushName as BrushSize;
-        const value = allBrushes[name];
+        const brushes = allBrushes[name];
 
         const btn = document.createElement("button");
         btn.className = `brush-size size-${name}`;
-        btn.title = name;        
+        btn.title = name;   
+        btn.style.padding = brushes.padding;     
         btn.addEventListener("click", () => {            
             document.querySelectorAll(".brush-size").forEach(btn => btn.classList.remove("active"));
             btn.classList.add("active");

@@ -1,9 +1,18 @@
-import { BrushSize } from "./types";
+import { Brushes, BrushSize } from "./types";
 
-export const allBrushes = {
-    small: 1,
-    medium: 10,
-    big: 20,
+export const allBrushes: Brushes = {
+    small: {
+        size: 1,
+        padding: "5px"
+    },
+    medium: {
+        size: 10,
+        padding: "7px"
+    },
+    big: {
+        size: 20,
+        padding: "9px"
+    }
 };
 
 export const changeBrushSize = (brushSize: BrushSize) => {
@@ -12,8 +21,8 @@ export const changeBrushSize = (brushSize: BrushSize) => {
 
     if (!canvas || !ctx) return;
 
-    const size = allBrushes[brushSize];
-    if (size) {
-        ctx.lineWidth = size;
+    const brush = allBrushes[brushSize];
+    if (brush) {
+        ctx.lineWidth = brush.size;
     };
 };

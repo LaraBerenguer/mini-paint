@@ -1,12 +1,13 @@
 import { drawLine, clearCanvas } from "./canvas.js";
 import { enableMouseDrawing } from "./mouse.js";
-import { showColorButtons } from "./ui.js";
+import { showColorButtons, showBrushSizes } from "./ui.js";
 
 const initApp = () => {
     const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
     if (!canvas) { console.log("Canvas not found"); return; };
 
     setClearButton();
+    setBrushSizes();
     setDrawButton();
     setColorButtons();
     enableMouseDrawing(canvas);
@@ -40,6 +41,10 @@ const setClearButton = () => {
 
 const setColorButtons = () => {
     showColorButtons();
+};
+
+const setBrushSizes = () => {
+    showBrushSizes();
 };
 
 initApp();

@@ -3,7 +3,7 @@ import { allBrushes, changeBrushSize } from "./brushes.js";
 import { PaintColor, BrushSize } from "./types.js";
 
 export const showColorButtons = () => {
-    const container = document.querySelector(".colorsSelector");
+    const container = document.querySelector(".colors-selector");
     if (!container) return;
     container.innerHTML = "";
 
@@ -31,7 +31,7 @@ export const showColorButtons = () => {
 };
 
 export const showBrushSizes = () => {
-    const container = document.querySelector(".brushSelector");
+    const container = document.querySelector(".brush-selector");
     if (!container) return;
     container.innerHTML = "";
 

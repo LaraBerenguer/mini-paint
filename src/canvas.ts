@@ -1,10 +1,16 @@
 import { DrawLine } from "./types.js";
 
-const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
-const ctx = canvas.getContext("2d");
+let canvas: HTMLCanvasElement | null = null;
+let ctx: CanvasRenderingContext2D | null = null;
+
+const getCanvasContext = (): CanvasRenderingContext2D | null => {
+    if (!canvas) canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
+    if (!ctx && canvas) ctx = canvas.getContext("2d");
+    return ctx;
+}
 
 export const drawLine = ({ xStart, yStart, xEnd, yEnd }: DrawLine) => {
-    if (!canvas) return;
+    const ctx = getCanvasContext();
     if (!ctx) return;
 
     ctx.beginPath();
@@ -14,14 +20,14 @@ export const drawLine = ({ xStart, yStart, xEnd, yEnd }: DrawLine) => {
 };
 
 export const clearCanvas = () => {
-    if (!canvas) return;
-    if (!ctx) return;
+    const ctx = getCanvasContext();
+    if (!ctx || !canvas) return;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 };
 
 export const ereaseStroke = () => {
-    if (!canvas) return;
+    const ctx = getCanvasContext();
     if (!ctx) return;
 
     ctx.globalCompositeOperation = "destination-out";

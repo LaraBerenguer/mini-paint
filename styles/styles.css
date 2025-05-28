@@ -39,7 +39,7 @@ input {
 
 .brush-size {
     width: auto;
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
 button {
@@ -67,15 +67,16 @@ button {
     border: 2px solid black;
 }
 
-.color-swatch {
-    border: none;
+.color-swatch,
+.brush-size {
+    border: 2px solid transparent;
+    box-sizing: border-box;
 }
 
-.color-swatch.active {
+.color-swatch.active,
+.brush-size.active {
     border: 2px solid black;
 }
-
-
 
 .main {
     display: flex;

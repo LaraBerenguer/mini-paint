@@ -37,7 +37,7 @@ input {
     gap: 10px;
 }
 
-.brush-size {    
+.brush-size {
     width: auto;
     border-radius: 10px;
 }
@@ -50,7 +50,8 @@ button {
     cursor: pointer;
 }
 
-.color-options, .brush-options {
+.color-options,
+.brush-options {
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -65,8 +66,9 @@ button {
     cursor: pointer;
     border: 2px solid black;
 }
+
 .color-swatch {
-    border: none;    
+    border: none;
 }
 
 .color-swatch.active {
@@ -104,4 +106,19 @@ canvas {
     right: -40px;
     z-index: 2;
     pointer-events: none;
+}
+
+.pond-img {
+    height: 50px;
+    position: absolute;
+    bottom: -15px;
+    right: -40px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@media (max-width: 37em) {
+    canvas {
+        width: 100%;
+    }
 }

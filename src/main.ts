@@ -1,10 +1,13 @@
 import { drawLine, clearCanvas, ereaseStroke } from "./canvas.js";
 import { enableMouseDrawing } from "./mouse.js";
+import { enableTouchDrawing } from "./touch.js";
 import { showColorButtons, showBrushSizes } from "./ui.js";
 
 const initApp = () => {
     const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
     if (!canvas) { console.log("Canvas not found"); return; };
+
+    setCanvasSize(canvas);
 
     setClearButton();
     setBrushSizes();
@@ -12,6 +15,16 @@ const initApp = () => {
     setDrawButton();
     setColorButtons();
     enableMouseDrawing(canvas);
+    enableTouchDrawing(canvas);
+};
+
+const setCanvasSize = (canvas: HTMLCanvasElement) => {
+    const container = canvas.parentElement;
+    if (!container) return;
+
+    const containerWidth = container.clientWidth;
+    canvas.width = containerWidth;
+    canvas.height = containerWidth / 2;
 };
 
 const setDrawButton = () => {

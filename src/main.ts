@@ -1,5 +1,6 @@
 import { drawLine, clearCanvas, ereaseStroke } from "./canvas.js";
 import { enableMouseDrawing } from "./mouse.js";
+import { enableTouchDrawing } from "./touch.js";
 import { showColorButtons, showBrushSizes } from "./ui.js";
 
 const initApp = () => {
@@ -12,6 +13,7 @@ const initApp = () => {
     setDrawButton();
     setColorButtons();
     enableMouseDrawing(canvas);
+    enableTouchDrawing(canvas);
 };
 
 const setDrawButton = () => {

@@ -1,5 +1,9 @@
 ## Mini paint 🎨
 
+Check it here 🐸 https://mini-paint-theta.vercel.app/
+
+![Mini Paint Preview](./public/mini-paint.JPG)
+
 A mini paint tool. A small project to try out some new tools.
 
 ### Functionalities

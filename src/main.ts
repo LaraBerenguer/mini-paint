@@ -1,4 +1,4 @@
-import { drawLine, clearCanvas, ereaseStroke } from "./canvas.js";
+import { clearCanvas, ereaseStroke } from "./canvas.js";
 import { enableMouseDrawing } from "./mouse.js";
 import { enableTouchDrawing } from "./touch.js";
 import { showColorButtons, showBrushSizes } from "./ui.js";
@@ -12,7 +12,6 @@ const initApp = () => {
     setClearButton();
     setBrushSizes();
     setEreaseStroke();
-    setDrawButton();
     setColorButtons();
     enableMouseDrawing(canvas);
     enableTouchDrawing(canvas);
@@ -25,25 +24,6 @@ const setCanvasSize = (canvas: HTMLCanvasElement) => {
     const containerWidth = container.clientWidth;
     canvas.width = containerWidth;
     canvas.height = containerWidth / 2;
-};
-
-const setDrawButton = () => {
-    const drawBtn = document.getElementById("drawBtn");
-    if (!drawBtn) { return };
-
-    drawBtn.addEventListener("click", () => {
-        const xStart = document.getElementById("xs") as HTMLInputElement;
-        const yStart = document.getElementById("ys") as HTMLInputElement;
-        const xEnd = document.getElementById("xe") as HTMLInputElement;
-        const yEnd = document.getElementById("ye") as HTMLInputElement;
-
-        drawLine({
-            xStart: Number(xStart.value),
-            yStart: Number(yStart.value),
-            xEnd: Number(xEnd.value),
-            yEnd: Number(yEnd.value),
-        });
-    })
 };
 
 const setClearButton = () => {

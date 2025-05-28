@@ -7,6 +7,8 @@ const initApp = () => {
     const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
     if (!canvas) { console.log("Canvas not found"); return; };
 
+    setCanvasSize(canvas);
+
     setClearButton();
     setBrushSizes();
     setEreaseStroke();
@@ -14,6 +16,15 @@ const initApp = () => {
     setColorButtons();
     enableMouseDrawing(canvas);
     enableTouchDrawing(canvas);
+};
+
+const setCanvasSize = (canvas: HTMLCanvasElement) => {
+    const container = canvas.parentElement;
+    if (!container) return;
+
+    const containerWidth = container.clientWidth;
+    canvas.width = containerWidth;
+    canvas.height = containerWidth / 2;
 };
 
 const setDrawButton = () => {

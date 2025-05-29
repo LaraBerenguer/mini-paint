@@ -2,7 +2,7 @@
 
 Check it here 🐸 https://mini-paint-theta.vercel.app/
 
-![Mini Paint Preview](./public/mini-paint.JPG)
+<img src="./public/mini-paint.JPG" alt="Mini Paint Preview" width="500" />
 
 A mini paint tool. A small project to try out some new tools.
 
@@ -14,5 +14,5 @@ A mini paint tool. A small project to try out some new tools.
 - [x] Changing the brush size.
 - [x] Ereasing the last stroke.
 - [ ] Refining the canvas limits.
-- [ ] Saving the drawing.
+- [x] Saving the drawing.
 

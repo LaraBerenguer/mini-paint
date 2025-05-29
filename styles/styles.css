@@ -5,6 +5,7 @@ body {
 }
 
 h1 {
+    font-family: "Cherry Bomb One", system-ui;
     text-align: center;
     color: #444;
 }
@@ -26,7 +27,8 @@ input {
     box-sizing: border-box;
 }
 
-.toolbar, .download {
+.toolbar,
+.download {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,9 +39,12 @@ input {
     gap: 10px;
 }
 
-.brush-size {
-    width: auto;
-    border-radius: 50%;
+.paint-selectors {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 button {
@@ -71,6 +76,20 @@ button {
 .brush-size {
     border: 2px solid transparent;
     box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.brush-size.size-small {
+    width: 10px;
+    height: 10px;
+}
+
+.brush-size.size-medium {
+    width: 15px;
+    height: 15px;
 }
 
 .color-swatch.active,

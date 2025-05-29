@@ -1,4 +1,4 @@
-import { clearCanvas, downloadImage, ereaseStroke } from "./canvas.js";
+import { clearCanvas, downloadImage, ereaseStroke, initCanvas } from "./canvas.js";
 import { enableMouseDrawing } from "./mouse.js";
 import { enableTouchDrawing } from "./touch.js";
 import { showColorButtons, showBrushSizes } from "./ui.js";
@@ -9,6 +9,7 @@ const initApp = () => {
 
     setCanvasSize(canvas);
 
+    setInitCanvas();
     setClearButton();
     setBrushSizes();
     setEreaseStroke();
@@ -47,6 +48,10 @@ const setColorButtons = () => {
 
 const setBrushSizes = () => {
     showBrushSizes();
+};
+
+const setInitCanvas = () => {
+    initCanvas();
 };
 
 const setDownloadButton = () => {

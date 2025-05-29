@@ -57,5 +57,3 @@ export const showBrushSizes = () => {
 
     container.appendChild(brushOptions);
 };
-
-

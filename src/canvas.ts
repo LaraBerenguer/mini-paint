@@ -31,8 +31,9 @@ export const ereaseStroke = () => {
     const ctx = getCanvasContext();
     if (!ctx) return;
 
-    ctx.globalCompositeOperation = "destination-out";
-    ctx.strokeStyle = "rgba(0,0,0,1)";
+    /*ctx.globalCompositeOperation = "destination-out";
+    ctx.strokeStyle = "rgba(0,0,0,1)";*/
+    ctx.strokeStyle = "white";
     ctx.lineWidth = 10;
 };
 

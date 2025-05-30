@@ -122,18 +122,18 @@ canvas {
 .cute-frog {
     height: 100px;
     position: absolute;
-    bottom: -15px;
-    right: -40px;
+    bottom: -30px;
+    right: -34px;
     z-index: 2;
     pointer-events: none;
 }
 
-.pond-img {
-    height: 50px;
+.cute-pond {
+    height: 110px;
     position: absolute;
-    bottom: -15px;
-    right: -40px;
-    z-index: 2;
+    bottom: -45px;
+    right: 26px;
+    z-index: 1;
     pointer-events: none;
 }
 

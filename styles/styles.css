@@ -147,10 +147,48 @@ canvas {
     right: 26px;
     z-index: 1;
     pointer-events: none;
+    max-width: 80%;
+    object-fit: contain;
 }
 
 @media (max-width: 37em) {
     canvas {
         width: 100%;
+    }
+
+    .cute-frog {
+        max-width: fit-content;
+    }
+
+    .cute-pond {
+        height: 90px;
+        right: 10px;
+        bottom: -35px;
+    }
+}
+
+@media (max-width: 28em) {
+    .cute-pond {
+        height: 80px;
+        right: 12px;
+        bottom: -35px;
+    }
+}
+
+@media (max-width: 20em) {
+
+    .buttons,
+    .paint-selectors {
+        flex-direction: column;
+    }
+
+    .paint-selectors {
+        gap: 1em;
+    }
+
+    .cute-pond {
+        height: 70px;
+        right: 15px;
+        bottom: -35px;
     }
 }

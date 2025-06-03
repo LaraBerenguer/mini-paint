@@ -140,14 +140,14 @@ canvas {
     pointer-events: none;
 }
 
-.cute-pond {
-    height: 110px;
+.mini-pond {
+    height: 170px;
     position: absolute;
-    bottom: -45px;
-    right: 26px;
+    bottom: -43px;
+    right: -13px;
     z-index: 1;
     pointer-events: none;
-    max-width: 80%;
+    max-width: 110%;
     object-fit: contain;
 }
 
@@ -160,18 +160,16 @@ canvas {
         max-width: fit-content;
     }
 
-    .cute-pond {
-        height: 90px;
-        right: 10px;
-        bottom: -35px;
+    .mini-pond {
+        bottom: -43px;
+        right: -13px;
     }
 }
 
 @media (max-width: 28em) {
-    .cute-pond {
-        height: 80px;
-        right: 12px;
-        bottom: -35px;
+    .mini-pond {
+        bottom: -55px;
+        right: 0;
     }
 }
 
@@ -186,9 +184,8 @@ canvas {
         gap: 1em;
     }
 
-    .cute-pond {
-        height: 70px;
-        right: 15px;
-        bottom: -35px;
+    .mini-pond {
+        width: 18em;
+        bottom: -4em;
     }
 }
